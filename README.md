@@ -1,8 +1,12 @@
 -----
 
-# ⚡️ Web Server Template – 빠르게 시작하는 풀스택 환경
+# Web Server Template
+### 빠르게 시작하는 풀스택 환경
 
-이 템플릿은 **Vite(Frontend)**, **NestJS(Real-Time Server)**, **Spring Boot(API Server)** 3가지 서버를 즉시 실행 가능한 상태로 구성한 올인원 웹 서버 스타터입니다. 복잡한 설정 없이, 단 한 번의 명령으로 개발 환경을 완성할 수 있습니다.
+이 템플릿은 **Vite(Frontend)**, **NestJS(Real-Time Server)**, **Spring Boot(API Server)** 3가지 서버를 즉시 실행 가능한 상태로 구성한 <br>
+올인원 웹 서버 스타터</span>입니다.
+
+복잡한 설정 없이, 단 한 번의 명령으로 개발 환경을 완성할 수 있습니다.
 
 -----
 
@@ -10,7 +14,7 @@
 
 ### 1\. 바로 실행 가능한 환경
 
-  - Shell 실행 스크립트(**`dc.sh`**)로 각 서버를 선택하여 손쉽게 실행할 수 있습니다.
+  - Shell 실행 스크립트(**`dc.sh`**) 또는 Makefile로 각 서버를 선택하여 손쉽게 실행할 수 있습니다.
   - 필요 시 **Docker Compose**로 통합 실행도 지원합니다.
   - CORS, DB, 네트워크, 포트 설정이 이미 완벽히 구성되어 있어 따로 수정할 필요가 없습니다.
 
@@ -44,7 +48,7 @@ spring.datasource.driver-class-name=org.postgresql.Driver
 
 ## 💻 실행 방법
 
-### 🟢 1. Shell 스크립트로 실행 (추천)
+### 1. Shell 스크립트로 실행 (추천)
 
 이 템플릿에는 `dc.sh` 라는 인터랙티브 실행 스크립트가 포함되어 있습니다.
 
@@ -56,7 +60,7 @@ chmod +x dc.sh
 ./dc.sh
 ```
 
-### ✨ 2. Makefile 단축 명령어 (선택 사항)
+### 2. Makefile 단축 명령어 (선택 사항)
 
 Makefile 사용에 익숙한 분들을 위해 단축 명령어를 제공합니다.
 아래 명령어를 실행하면 1번의 ./dc.sh 스크립트가 동일하게 실행됩니다.
@@ -98,7 +102,7 @@ $ ./dc.sh
 
 -----
 
-### 🐳 3. Docker Compose로 직접 실행
+### 3. Docker Compose로 직접 실행
 
 필요할 경우, 모든 서버를 도커 컨테이너로 통합 실행할 수도 있습니다.
 
@@ -124,14 +128,14 @@ docker compose --profile api-server up --build
 
 | 항목 | 설명 |
 | :--- | :--- |
-| **CORS** | 프론트엔드 개발 서버(`http://localhost:5174`, `http://127.0.0.1:5174`)의 요청을 허용하도록 NestJS와 Spring Boot에 모두 설정되어 있습니다. 인증 정보(Credentials) 전송 및 모든 표준 HTTP 메서드가 허용됩니다. |
+| **CORS** | 프론트엔드 개발 서버(`http://localhost:5174`)의 요청을 허용하도록 NestJS와 Spring Boot에 모두 설정되어 있습니다. <br> 인증 정보(Credentials) 전송 및 모든 표준 HTTP 메서드가 허용됩니다. |
 | **DB 연결** | Postgres/MySQL 등 외부 DB에 바로 연결 가능 (템플릿에 예시 포함) |
 | **네트워크** | `bridge` 기반의 `my-app-network`로 모든 컨테이너가 자동 연결 |
 | **핫 리로드** | `frontend`와 `api-server`는 코드 수정 시 자동 반영 |
 
 -----
 
-## 🧱 폴더 구조 예시
+## 🧱 기본 폴더 구조
 
 ```
 apps/
