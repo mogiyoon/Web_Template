@@ -3,8 +3,7 @@
 # Web Server Template
 ### 빠르게 시작하는 풀스택 환경
 
-이 템플릿은 **Vite(Frontend)**, **NestJS(Real-Time Server)**, **Spring Boot(API Server)** 3가지 서버를 즉시 실행 가능한 상태로 구성한 <br>
-올인원 웹 서버 스타터</span>입니다.
+이 템플릿은 **Vite(Frontend)**, **NestJS(Real-Time Server)**, **Spring Boot(API Server)** 3가지 서버를 즉시 실행 가능한 상태로 구성한 **올인원 웹 서버 스타터**입니다.
 
 복잡한 설정 없이, 단 한 번의 명령으로 개발 환경을 완성할 수 있습니다.
 
