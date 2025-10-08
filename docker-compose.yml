@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./apps/frontend
+      dockerfile: Dockerfile
+    volumes:
+      - ./apps/frontend:/app
+      - /app/node_modules      
+    ports:
+      - "5174:5174"
+    profiles: ["frontend"]
+
+  real-time-server:
+    build:
+      context: ./apps/real-time-server
+      dockerfile: Dockerfile
+    env_file:
+      - ./apps/real-time-server/.env
+    ports:
+      - "3000:3000"
+    profiles: ["real-time-server"]
+    networks:
+      - my-app-network
+
+  api-server:
+    build:
+      context: ./apps/api-server
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    profiles: ["api-server"]
+    networks:
+      - my-app-network
+    volumes:
+      - ./apps/api-server/build/classes/java/main:/app/classes
+      - ./apps/api-server/build/resources/main:/app/resources
+
+volumes:
+  pgdata:
+
+networks:
+  my-app-network:
+    driver: bridge

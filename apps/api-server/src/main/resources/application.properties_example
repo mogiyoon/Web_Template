@@ -1,0 +1,11 @@
+# 활성 프로파일 설정
+spring.profiles.active=dev
+
+# 데이터베이스 연결 정보
+spring.datasource.url=jdbc:postgresql://host.docker.internal:5432/db_name
+spring.datasource.username=username
+spring.datasource.password=password
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+# JPA 및 하이버네이트 설정
+spring.jpa.hibernate.ddl-auto=none

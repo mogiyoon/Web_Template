@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: api-server
+
+  # 공통 기본값(로컬 개발 편의용) — 실제 값은 프로파일/ENV로 덮어씌움
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    driver-class-name: ${SPRING_DATASOURCE_DRIVER_CLASS_NAME}
+
+  jpa:
+    hibernate:
+      ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO:none}
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+server:
+  servlet:
+    context-path: /api
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      base-path: /
+      exposure:
+        include: health
